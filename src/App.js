@@ -3,16 +3,17 @@ import TodoList from '../src/components/TodoComponents/TodoList';
 
 const todoArray = [
   {
-    task: 'Organize Garage',
-    id: 1528817077286,
-    completed: false
-},
-{
-    task: 'Bake Cookies',
-    id: 1528817084358,
-    completed: false
-}
-]
+      task: 'Organize Garage',
+      id: 1528817077286,
+      completed: false
+  },
+  {
+      task: 'Bake Cookies',
+      id: 1528817084358,
+      completed: false
+  }
+];
+
 class App extends React.Component {
   // you will need a place to store your state in this component.
   // design `App` to be the parent component of your application.
@@ -23,19 +24,22 @@ class App extends React.Component {
     this.state = {
       todos: todoArray,
     };
-  }
-
-
+  }  
+    
   render() {
     return (
       <div>
-        <h2>Millan's ToDos={this.state.todos}</h2>        
-          <input placeholder="add list item"></input>
-            <button>Add Item</button>
-            <button>Done</button>
+        <h2>***Todo List***</h2>
+        <ul>
+        <TodoList todoList={this.state.todos}/>
+        </ul>
+        <input placeholder="input items"></input>
+        <button>Add Item</button>
+        <button>Clear Completed</button>
       </div>
     );
   }
 }
-
 export default App;
+
+    

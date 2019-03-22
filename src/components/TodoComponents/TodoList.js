@@ -1,7 +1,8 @@
-import React from './Todo';
+import React from 'react';
+import Todo from './Todo';
 
-const TodoList = props => props.todoList.map( todoItem =>
-    <Todo key={todoItem.id} task={todoItem.task} />
+const TodoList = props => props.todoList.map( todoItem => 
+    <Todo key={todoItem.id} task={todoItem.task} /> 
 );
 
 export default TodoList;
